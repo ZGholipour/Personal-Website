@@ -1,0 +1,67 @@
+@import "resetcss.css";
+@import "grid.css";
+@import "fonts.css";
+:root {
+  --text-color: #333;
+  --app-bg-color: #fff;
+  --section-bg-color: #fff;
+  --primary-color: #0abead;
+}
+
+/*APP Style*/
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Poppins;
+  line-height: 1.5;
+}
+/*Reset Style*/
+a {
+  text-decoration: none;
+}
+/*Header style*/
+
+.header {
+  background-color: var(--app-bg-color);
+  box-shadow: 0 0.5rem 4rem rgba(4, 195, 255, 0.16);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.nav__logo {
+  font-family: "Poppins Black";
+  font-size: 6rem;
+  color: var(--primary-color);
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__item {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.nav__item:first-child {
+  margin-left: 0;
+}
+.nav__item:last-child {
+  margin-right: 0;
+}
+.nav__link {
+  color: var(--text-color);
+}
+.nav__link--active {
+  color: var(--primary-color);
+}
+
+.nav__toggle-icon {
+}
+.nav__toggle-line {
+}
