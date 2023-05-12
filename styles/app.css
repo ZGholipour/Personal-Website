@@ -17,16 +17,37 @@ body {
   font-size: 1.6rem;
   font-family: Poppins;
   line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--app-bg-color);
 }
 /*Reset Style*/
 a {
   text-decoration: none;
 }
+/*Component*/
+.app-btn {
+  width: 15rem;
+  height: 4rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  background-color: var(--primary-color);
+  font-family: "Poppins SemiBold";
+}
+.app-btn--orange {
+  background-color: #f57f17;
+}
 /*Header style*/
 
 .header {
-  background-color: var(--app-bg-color);
+  background-color: var(--section-bg-color);
   box-shadow: 0 0.5rem 4rem rgba(4, 195, 255, 0.16);
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  left: 0;
 }
 .nav {
   display: flex;
@@ -41,8 +62,7 @@ a {
 }
 .menu {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  z-index: 100;
 }
 .nav__item {
   margin-left: 2rem;
@@ -56,12 +76,90 @@ a {
 }
 .nav__link {
   color: var(--text-color);
+  display: inline-block;
+  font-family: "Poppins Medium";
+  transition: color 150ms ease-in;
+}
+.nav__link:hover {
+  color: var(--primary-color);
 }
 .nav__link--active {
   color: var(--primary-color);
 }
 
 .nav__toggle-icon {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__toggle-line,
+.nav__toggle-line::after,
+.nav__toggle-line::before {
+  content: "";
+  width: 5rem;
+  height: 0.4rem;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
 }
 .nav__toggle-line {
+  position: relative;
+  transition: all 100ms ease-in;
+}
+.nav__toggle-line::after {
+  position: absolute;
+  bottom: 1.2rem;
+  transition: all 150ms ease-in;
+}
+.nav__toggle-line::before {
+  position: absolute;
+  top: 1.2rem;
+  transition: all 150ms ease-in;
+}
+.nav__toggle-icon--open .nav__toggle-line::after {
+  transform: translateY(1.2rem) rotate(45deg);
+}
+.nav__toggle-icon--open .nav__toggle-line::before {
+  transform: translateY(-1.2rem) rotate(-45deg);
+}
+.nav__toggle-icon--open .nav__toggle-line {
+  background-color: #fff;
+}
+
+/*Main*/
+.main {
+  padding-top: 12rem;
+}
+/*Home Section*/
+.home {
+}
+.home__content {
+}
+.home__name {
+  font-family: "Poppins SemiBold";
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  margin: 0;
+}
+.home__name span {
+  color: #f57f17;
+}
+
+.home__title {
+  font-family: "Poppins Bold";
+  color: var(--primary-color);
+  font-size: 4rem;
+  margin: 0;
+}
+.home__caption {
+  margin-top: 1rem;
+}
+.home__links-wrapper {
+}
+.home__link {
+}
+.home__photo {
 }
