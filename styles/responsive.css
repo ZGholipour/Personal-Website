@@ -1,4 +1,14 @@
+@media screen and (max-width: 1400px) {
+  .home__photo {
+    width: 48rem;
+    height: 48rem;
+  }
+}
 @media screen and (max-width: 1200px) {
+  .home__photo {
+    width: 38rem;
+    height: 38rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -7,6 +17,23 @@
   }
   .nav__item {
     margin-right: 2rem;
+  }
+  .home__content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .home__photo {
+    margin: 0 auto;
+    border-width: 1.5rem;
+  }
+  .home .row {
+    flex-direction: column-reverse;
+  }
+  .home {
+    margin-top: 4rem;
   }
 }
 
@@ -57,4 +84,7 @@
 }
 
 @media screen and (max-width: 576px) {
+  .home__title {
+    font-size: 3.5rem;
+  }
 }
