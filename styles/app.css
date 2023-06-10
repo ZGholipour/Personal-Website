@@ -394,3 +394,7 @@ body {
 .service--green {
   background-color: #5ec75a;
 }
+/*Resume Section*/
+.resume-list{
+  background: #000;
+}
